@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Dark-Cyan: hsl(185, 75%, 39%);
+    --Very-dark-blue: hsl(229, 23%, 23%);
+    --Dark-Grayish-Blue: hsl(227, 10%, 46%);
+    --Dark-Gray: hsl(0, 0%, 59%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: url(images/bg-pattern-top.svg),
+      url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top -400px left -250px, bottom -600px right -170px;
+    background-color: var(--Dark-Cyan);
+}
+
+.card {
+    background-color: white;
+    width: 350px;
+    height: 375px;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    overflow: hidden;
+}
+
+.profile {
+    background: url("images/bg-pattern-card.svg") no-repeat center;
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    border: 0.4rem solid white;
+    margin: 5rem auto;
+}
+
+.info {
+    margin-top: 13rem;
+    width: 100%;
+}
+
+.name {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.name span {
+    color: var(--Dark-Gray);
+    padding-left: 8px;
+    font-weight: 400;
+}
+
+.city {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 400;
+    color: var(--Dark-Gray);
+}
+
+.stats {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.stats::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 95px;
+    background-color: var(--Very-dark-blue);
+    opacity: 0.1;
+}
+
+
+.stats li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.followers,
+.like,
+.photos {
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 8px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--Dark-Gray);
+}
+
+.attribution {
+    margin-top: 46rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+
+
+@media screen and (max-width: 480px) {
+    body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: url(images/bg-pattern-top.svg),
+      url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top -550px left -770px, bottom -730px right -570px;
+    background-color: var(--Dark-Cyan);
+}
+}
